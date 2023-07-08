@@ -21,7 +21,10 @@ $(".btn").click(function() {
     checkAnswer(userClickedPattern.length-1);
   });
 
-
+$(document).click(function(){
+    flag=true;
+    nextSequence();
+});
   
 function nextSequence() {
     userClickedPattern =[];
