@@ -12,6 +12,10 @@ $(document).keydown(function(event){
         flag=true;
     }
 });
+$(document).one("click", function(){
+    flag=true;
+    nextSequence();
+});
 
 $(".btn").click(function() {
     var userChosenColour = $(this).attr("id");
@@ -21,10 +25,7 @@ $(".btn").click(function() {
     checkAnswer(userClickedPattern.length-1);
   });
 
-$(document).click(function(){
-    flag=true;
-    nextSequence();
-});
+
   
 function nextSequence() {
     userClickedPattern =[];
